@@ -1,8 +1,11 @@
 package com.backend.backend.Service;
 
+import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Service;
 
 import com.backend.backend.Models.User;
@@ -17,8 +20,10 @@ public class UserService {
     public UserService(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
-    public List<User> findAll() {
-        return userRepository.findAll();
+
+    public List<User> findAllUsers() {
+        return userRepository.findAllUsers();
     }
 
+   
 }
